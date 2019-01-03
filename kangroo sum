@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int x1,x2,v1,v2,count=0,count1=0,flag;
+    scanf("%d %d %d %d",&x1,&v1,&x2,&v2);
+    if(v2>v1)
+    {
+        flag=0;
+    }
+       while(x1<x2)
+        {
+            x1+=v1;
+            count++;
+            x2+=v2;
+            count1++;
+            if((x1==x2)&&(count==count1))
+            {
+                
+                flag=1;
+                break;
+            }
+        }
+        if(flag)
+        {
+            printf("YES");
+        }
+        else
+        {
+            printf("NO");
+        }
+        
+    }
