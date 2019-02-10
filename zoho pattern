@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+//program to get only odd number of character and print according to the pattern 'k' shape
+void main()
+{
+int i,j,k,l,len,n;
+char a[100];
+printf("enter a string");
+scanf("%s",a);
+len=strlen(a);
+n=len/2;
+l=len;
+for(i=0;i<=n;i++)
+{
+for(j=0;j<=n;j++)
+{
+if(j==0)
+{
+printf("%c",a[i]);
+}
+else if(i+j==n)
+{
+printf("%c",a[l-1]);
+
+}
+else
+{
+printf(" ");
+}
+}
+l--;
+printf("\n");
+}
+
+for(k=i;k<=len-1;k++)
+{
+for(j=0;j<=n;j++)
+{
+if(j==0)
+{
+printf("%c",a[k]);
+}
+else if((k-j)==n)
+{
+printf("%c",a[k]);
+}
+else
+{
+printf(" ");
+}
+}
+printf("\n");
+}
+}
+
+
+
+
+
+OUTPUT:
+
+
+enter a string program
+p  m
+r a
+or
+g
+rr
+a a
+m  m
+
+Process returned 6 (0x6)   execution time : 3.653 s
+Press any key to continue.
