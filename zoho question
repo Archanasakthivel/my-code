@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<string.h>
+/*program to print a vowel character two times along with original string*/
+void main()
+{
+char a[100],b[100];
+int temp,i,len,k=0;
+printf("enter a string");
+scanf("%s",a);
+len=strlen(a);
+for(i=0;i<len;i++)
+{
+if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u')
+{
+b[k++]=a[i];
+b[k++]=a[i];
+}
+else
+{
+b[k]=a[i];
+k++;
+}
+}
+printf("the modified string are:");
+for(i=0;i<k;i++)
+{
+printf("%c",b[i]);
+}
+}
+
+
+
+
+OUTPUT:
+enter a string         archana
+the modified string are:aarchaanaa
+Process returned 10 (0xA)   execution time : 2.904 s
