@@ -1,0 +1,72 @@
+#include<stdio.h>
+int main()
+{
+int i,j,k,m,n,p;
+printf("enter the number");
+scanf("%d",&n);
+m=n/2+1;
+for(i=1;i<=m;i++)
+{
+for(j=1;j<=n;j++)
+{
+if(i==j)
+{
+printf("%d",i);
+}
+else if(i+j==n+1)
+{
+printf("%d",j);
+}
+else
+{
+printf(" ");
+}
+}
+printf("\n");
+}
+
+for(k=i;k<=n;k++)
+{
+for(p=1;p<=n;p++)
+{
+if(p==k)
+{
+printf("%d",k);
+}
+else if(p+k==n+1)
+{
+printf("%d",p);
+}
+else
+{
+printf(" ");
+}
+}
+printf("\n");
+}
+return 0;
+}
+
+
+
+
+
+output:
+
+
+
+enter the number11
+1         11
+ 2       10
+  3     9
+   4   8
+    5 7
+     6
+    5 7
+   4   8
+  3     9
+ 2       10
+1         11
+
+Process returned 0 (0x0)   execution time : 3.843 s
+Press any key to continue.
