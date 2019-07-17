@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int a[100],hole,i,j,key,n;
+printf("enter a number");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+for(i=2;i<=n;i=i+2)
+{
+hole=i;
+key=a[i];
+while(a[hole-2]<=key&&hole>0)
+{
+a[hole]=a[hole-2];
+hole=hole-2;
+}
+a[hole]=key;
+}
+for(i=3;i<n;i=i+2)
+{
+hole=i;
+key=a[i];
+while(a[hole-2]>=key&&hole>0)
+{
+a[hole]=a[hole-2];
+hole=hole-2;
+}
+a[hole]=key;
+}
+for(i=0;i<n;i++)
+{
+printf("%d\t",a[i]);
+}
+}
